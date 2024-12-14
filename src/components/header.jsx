@@ -29,7 +29,7 @@ const Header = () => {
           />
         </div>
         {/* Button New Item */}
-        <button className="bg-[#396C95] text-white py-[13px] px-[24px] rounded-tl-[4px] rounded gap-[8px] w-[142px] h-[44px] font-[Helvetica] text-[16px] font-normal leading-[18.4px] text-center text-decoration-skip-ink-none bg-white flex items-center justify-center">
+        <button className="bg-[#396C95] text-white py-[13px] px-[24px] rounded-tl-[4px] rounded gap-[8px] w-[142px] h-[44px] font-[Helvetica] text-[16px] font-normal leading-[18.4px] text-center  flex items-center justify-center">
   <span className="text-[25px]">
     +
   </span>

@@ -1,37 +1,64 @@
-import React from 'react';
+import React from "react";
+import img1 from "../assets/img1.png"; 
+import img2 from "../assets/img2.png"; 
+import img3 from "../assets/img3.png"; 
+import img4 from "../assets/img4.png"; 
+import img5 from "../assets/img5.png";
+import img6 from "../assets/img6.png"; 
+import img7 from "../assets/img7.png"; 
+import img8 from "../assets/img8.png";  
 
 const items = [
-  { id: 1, name: 'Asparagus', image: 'https://via.placeholder.com/150', price: '$3.00' },
-  { id: 2, name: 'Strawberry', image: 'https://via.placeholder.com/150', price: '$2.50' },
-  { id: 3, name: 'Orange', image: 'https://via.placeholder.com/150', price: '$1.80' },
-  { id: 4, name: 'Broccoli', image: 'https://via.placeholder.com/150', price: '$2.00' },
-  { id: 5, name: 'Peppers', image: 'https://via.placeholder.com/150', price: '$3.50' },
-  { id: 6, name: 'Fish', image: 'https://via.placeholder.com/150', price: '$4.20' },
+  { id: 1, name: "Name", image: img1, quantity: "" }, 
+  { id: 2, name: "Name", image: img2, quantity: "" },
+  { id: 3, name: "Name", image:img3, quantity: "" },
+  { id: 4, name: "Name", image: img4, quantity: "" },
+  { id: 5, name: "Name", image: img5, quantity: "" },
+  { id: 6, name: "Name", image: img6, quantity: "" },
+  { id: 7, name: "Name", image: img7, quantity: "" },
+  { id: 8, name: "Name", image: img8, quantity: "" },
 ];
 
-const Card = () => {
+const CardList = () => {
   return (
     <main className="flex-grow p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {items.map((item) => (
           <div
             key={item.id}
-            className="bg-white border rounded-lg shadow-md overflow-hidden"
+            className="flex border rounded-md shadow-sm overflow-hidden bg-white min-h-[150px]"
           >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-32 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold">{item.name}</h3>
-              <p className="text-gray-600 mt-1">{item.price}</p>
-              <div className="mt-4 flex justify-between items-center">
-                <button className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-500">
-                  Add to Cart
-                </button>
-                <span className="text-sm text-gray-500">Quantity: 1</span>
-              </div>
+            {/* Section Image */}
+            <div className="relative w-1/2">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full "
+              />
+            </div>
+
+            {/* Section Texte */}
+            <div className="p-2 py-2 pt-2 space-y-4">
+              <p
+                className="w-[43px] h-[21px] gap-0 text-[#191919] font-helvetica text-base font-normal leading-[20.8px]"
+              >
+                {item.name}
+              </p>
+              <p
+                className="w-[43px] h-[21px] gap-0 text-[#191919] font-helvetica text-base font-normal leading-[20.8px]"
+              >
+                Weight {item.weight}
+              </p>
+              <p
+                className="w-[43px] h-[21px] gap-0 text-[#191919] font-helvetica text-base font-normal leading-[20.8px]"
+              >
+                Quantity {item.quantity}
+              </p>
+              <p
+                className="w-[43px] h-[21px] gap-0 text-[#191919] font-helvetica text-base font-normal leading-[20.8px]"
+              >
+                Price {item.price}
+              </p>
             </div>
           </div>
         ))}
@@ -40,4 +67,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CardList;
